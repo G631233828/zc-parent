@@ -1,0 +1,130 @@
+.color_grey {
+    color: #707070;
+}
+
+.lanmu_info {
+    margin: 10px auto;
+}
+
+.lanmu_info>.left {
+    width: 70%;
+    height: auto;
+    border: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+}
+
+.lanmu_info>.right {
+    width: 27%;
+    height: auto;
+}
+
+.lanmu_info .left>img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.lanmu_info .left video {
+    display: block;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.lanmu_info>.left .zixun_info {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.lanmu_info>.left .zixun_info_head {
+    /*height: 70px;*/
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DEDFE3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lanmu_info>.left .zixun_info_head h3 {
+    margin: 15px 0;
+    color: #505050;
+}
+
+.lanmu_info>.left .zixun_info_head p {
+    color: #7E7E7E;
+}
+
+.lanmu_info>.left .zixun_info_head p span {
+    margin-right: 8px;
+}
+
+.tuijian_wenzhang h3 {
+    color: white;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.tuijian_wenzhang p {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px dashed #F4F4F4;
+}
+
+.tuijian_wenzhang p:last-of-type {
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.tuijian_wenzhang p a:hover {
+    color: #00CCFF;
+}
+
+.zixun_info_container p {
+    /*color: #8B8B8B;*/
+    line-height: 25px;
+    margin-bottom: 10px;
+    text-indent: 2em;
+}
+
+.zixun_info_container table p {
+    text-indent: 0em;
+}
+
+.zixun_info_container table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.zixun_info_container table[align="center"] {
+    margin: 0 auto;
+}
+
+.zixun_info_container table tr th,
+.zixun_info_container table tr td {
+    border: 1px solid #ddd;
+}
+
+.zixun_info_container .img_kuang {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.zixun_info_container .img_kuang img {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 220px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.zixun_info_container .img_kuang .img_big {
+    width: 75%;
+    margin-left: 12.5%;
+    height: 360px;
+}
+
+.tuijian_wenzhang a {
+    color: #333;
+    margin-left: 30px;
+    display: inline-block;
+}

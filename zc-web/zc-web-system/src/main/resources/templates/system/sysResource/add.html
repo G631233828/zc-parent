@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="public/public_css::pub_css"></head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+canvas#canvas4 {
+	position: relative;
+	top: 20px;
+}
+</style>
+<link th:href="@{/assets/css/icons-style.css}" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+	<!-- TOP NAVBAR -->
+	<div th:replace="public/public::top"></div>
+	<!-- /END OF TOP NAVBAR -->
+
+	<!-- SIDE MENU -->
+	<div th:replace="public/public::left(activeUri='system')"></div>
+	<!-- END OF SIDE MENU -->
+
+	<!--  PAPER WRAP -->
+	<div class="wrap-fluid">
+		<div class="container-fluid paper-wrap bevel tlbr">
+
+
+			<!-- CONTENT -->
+			<!--TITLE -->
+			<div th:replace="public/public::title"></div>
+			<!--/ TITLE -->
+
+			<!-- BREADCRUMB -->
+			<div th:replace="public/public::menu"></div>
+			<!-- END OF BREADCRUMB -->
+
+			<div class="content-wrap">
+				<div class="row">
+
+
+					<div class="col-sm-12">
+						<!-- BLANK PAGE-->
+
+						<div style="margin: -20px 15px;" class="nest" id="Blank_PageClose">
+							<div class="title-alt">
+								<h6>资源信息</h6>
+								<div class="titleClose">
+									<a class="gone" href="#Blank_PageClose"> <span
+										class="entypo-cancel"></span>
+									</a>
+								</div>
+								<div class="titleToggle">
+									<a class="nav-toggle-alt" href="#Blank_Page_Content"> <span
+										class="entypo-up-open"></span>
+									</a>
+								</div>
+
+							</div>
+
+
+							<div class="body-nest" id="Blank_Page_Content">
+								<div class="row">
+									<!-- edit form column -->
+									<div class="col-md-12 personal-info">
+										<form class="form-horizontal" enctype="multipart/form-data"
+											id="sysResourceForm" th:action="@{/admin/sysResource}"
+											method="post">
+											<input type="hidden" name="_method" value="put"
+												th:if="${sysResource!=null}" /> <input type="hidden"
+												name="id" th:if="${sysResource!=null}"
+												th:value="${sysResource.id}">
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">菜单名称：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="name" placeholder="请输入菜单名称"
+														name="name"
+														th:value="${sysResource!=null}?${sysResource.name}"
+														required="required">
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">菜单权限Key：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="resKey"
+														placeholder="请输入菜单权限Key" name="resKey"
+														th:value="${sysResource!=null}?${sysResource.resKey}"
+														required="required">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-1 control-label">菜单Url：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="resUrl"
+														placeholder="请输入菜单权限Url" name="resUrl"
+														th:value="${sysResource!=null}?${sysResource.resUrl}"
+														required="required">
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label class="col-lg-1 control-label">按钮权限Key：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="permissionKey"
+														placeholder="请输入按钮权限Key" name="permissionKey"
+														th:value="${sysResource!=null}?${sysResource.permissionKey}"
+														required="required">
+												</div>
+											</div>
+
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">菜单类别：</label>
+												<div class="col-lg-6">
+													<div class="ui-select">
+														<select id="type" name="type" class="form-control"
+															onchange="return changeType();">
+															<option value="">---请选择菜单类别---</option>
+															<option
+																th:selected="${sysResource!=null}?${sysResource.type == 0}"
+																value="0">目录</option>
+															<option
+																th:selected="${sysResource!=null}?${sysResource.type == 1}"
+																value="1">菜单</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="form-group" id="parent"
+												th:style="${sysResource?.parentId!='0'}?'display:block;':'display:none;'">
+												<label class="col-lg-1 control-label">所属目录：</label>
+												<div class="col-lg-6">
+													<div class="ui-select">
+														<select name="parentId" id="parentId" class="form-control" required>
+															<option value="">----选择目录----</option>
+															<option
+																th:if="${resList !=null && res?.id!=sysResource?.id}"
+																th:value="${res.id}" th:each="res:${resList}"
+																th:selected="${res.id == sysResource?.parentId}"
+																th:text="${res.name}">
+														</select>
+													</div>
+												</div>
+											</div>
+
+
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">使用状态：</label>
+												<div class="col-lg-6">
+													<div class="ui-select">
+														<select name="isDisable" id="isDisable"
+															class="form-control" required>
+															<option value="false"
+																th:selected="${sysResource!=null}?${sysResource.isDisable eq false}">启用中</option>
+															<option value="true"
+																th:selected="${sysResource!=null}?${sysResource.isDisable eq true}">禁用中</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">菜单图标：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="icon" placeholder="请选择菜单图标"
+														name="icon"
+														th:value="${sysResource!=null}?${sysResource.icon}"
+														onclick="return selectIcon();">
+												</div>
+											</div>
+
+
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">描述：</label>
+												<div class="col-lg-6">
+
+													<textarea rows="5" id="description" class="col-lg-12"
+														name="description" placeholder="描述"
+														th:text="${sysResource!=null}?${sysResource.description }">
+													</textarea>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label"></label>
+												<div class="col-md-8">
+													<button type="submit" class="btn btn-success"
+														th:text="${sysResource!=null?'修改':'添加'}"></button>
+													<span></span> <input th:if="${sysResource} eq null"
+														class="btn btn-default" value="重置" type="reset">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OF BLANK PAGE -->
+
+				</div>
+			</div>
+
+			<!--/row-->
+
+			<div th:replace="system/sysResource/icon::iconModal"></div>
+		</div>
+	</div>
+	<!--  END OF PAPER WRAP -->
+	<!-- 右侧隐藏菜单start -->
+	<div th:replace="public/public::right"></div>
+	<!-- 右侧隐藏菜单end-->
+	<!-- 底部js -->
+	<div th:replace="public/public_js::pub_js"></div>
+	<div th:replace="public/public_js::public_script"></div>
+	<div th:replace="public/public::footer"></div>
+	<div th:replace="public/public::myModal"></div>
+	<!-- Jquery Validate -->
+	<script type="text/javascript"
+		th:src="@{/plugs/validate/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugs/validate/messages_zh.min.js}"></script>
+
+	<script type="text/javascript" th:inline="javascript"
+		th:src="@{/js/system/sysResource/sysResource.js}"></script>
+	<div th:replace="public/public_js::validator"></div>
+	
+
+	
+	
+	
+	
+	
+	
+</body>
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+		
+	/*]]>*/
+
+	
+	</script>
+	
+</html>

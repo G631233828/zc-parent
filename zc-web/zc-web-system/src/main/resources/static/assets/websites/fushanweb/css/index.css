@@ -1,0 +1,578 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #f8f5fa;
+}
+
+.school_logo img {
+    vertical-align: middle;
+    width: 98px !important;
+    height: 53px !important;
+}
+
+.school-logo {
+    margin-top: 35px !important;
+    ;
+}
+
+.school-title {
+    margin-top: 45px !important;
+    ;
+}
+
+.container {
+    /*margin-top: 25px;*/
+}
+
+.bg-grey {
+    background-color: #f8f8f8;
+}
+
+.ft_orange {
+    color: #df680f;
+}
+
+.color_yellow {
+    color: #fffc00;
+}
+
+.wrap {
+    width: 100%;
+    min-width: 1200px;
+}
+
+.header {
+    width: 100%;
+}
+
+.header-content {
+    background-color: #f4f4f4;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+}
+
+.login-box {
+    float: right;
+}
+
+.login-box input,
+.login-box select {
+    width: 108px;
+    margin-right: 25px;
+    border: none;
+}
+
+.login-box a {
+    padding: 2px 15px;
+    background-color: #08AAC2;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/*学校名称*/
+.schoolName {
+    height: 140px;
+    width: 1200px;
+    background: url(../images/bg_logo.png);
+    color: #fff;
+    margin: 0 auto;
+}
+
+.school-logo {
+    float: left;
+    margin-top: 13px;
+}
+
+.school-logo>img {
+    width: 110px;
+    height: 110px;
+}
+
+.school-title {
+    float: left;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.school-title>img {
+    height: 77px;
+    width: 511px;
+}
+
+.name_pic img {
+    height: 52px !important;
+}
+
+/*导航栏*/
+.col1200 {
+    width: 1200px;
+    margin: auto;
+    height: 38px;
+}
+
+.navbg {
+    min-width: 1200px;
+    height: 38px;
+    width: 100%;
+    background: url(../images/bg_nav.png);
+    box-shadow: 1px 1px 7px #999;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+}
+
+#navul li {
+    float: left;
+    margin-right: 1px;
+    width: 108px;
+    height: 38px;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+}
+
+#navul li a:link,
+#navul li a:visited {
+    color: #FFFFFF;
+}
+
+#navul li ul {
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    top: 38px;
+    background: #0C73C6;
+}
+
+#navul li ul li {
+    display: block;
+    width: 132px;
+    float: none;
+    margin-right: 0px;
+    height: 28px;
+    position: relative;
+    line-height: 28px;
+    border-bottom: #0C73C6 1px dashed;
+    font-size: 12px;
+}
+
+#navul li.navmoon {
+    background: #0C73C6;
+    width: 132pxpx;
+    height: 38px;
+    line-height: 38px;
+}
+
+#navul li.navmoon a {
+    color: #FFFFFF;
+}
+
+#navul li.navmoon ul {
+    display: block;
+}
+
+#navul li.navmoon ul a {
+    display: block;
+    width: 132px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.nav_active {
+    background: #0C73C6;
+}
+
+.right_ban,
+.left_ban {
+    width: 200px;
+    height: 110px;
+    position: fixed;
+    z-index: 99;
+    top: 60%;
+}
+
+.left_ban a img {
+    width: 200px;
+    height: 110px;
+}
+
+.content_top {
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+/*学校公告*/
+.xxgg {
+    width: 275px;
+    height: 320px;
+    margin: 0px 20px 20px 0px;
+}
+
+.ggrq {
+    width: 50px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background: #A859D6;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.gg_title {
+    color: #000;
+}
+
+.xxgg dt {
+    line-height: 25px;
+}
+
+/*校园新闻*/
+.info_top_banner {
+    width: 436px;
+    height: 100%;
+}
+
+.notice_title {
+    color: #7660a3;
+    height: 50px;
+    line-height: 45px;
+    font-size: 26px;
+}
+
+.notice_title .right {
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.notice {
+    height: 320px;
+    width: 900px;
+    float: left;
+    margin: 0px 0px 20px 0px;
+}
+
+.title {
+    text-align: center;
+    line-height: 40px;
+    color: #F99003;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.click-detail {
+    color: #AAAAAA;
+    position: absolute;
+    margin-left: 335px;
+    margin-top: -15px;
+}
+
+.newslist {
+    border-bottom: 1px dashed #ccc;
+    height: 27px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.list dl dt {
+    border-bottom: 1px dashed #753E99;
+    height: 40px;
+    line-height: 40px;
+}
+
+.newslist a,
+.list dl dt a {
+    color: #000;
+}
+
+.newslist a .right,
+.list dl dt a .right {
+    color: #989898;
+}
+
+.newslist:hover a,
+.newslist:hover a .right {
+    color: #793D97 !important;
+}
+
+/*广告条*/
+#banner_tabs2 {
+    height: 96px;
+}
+
+/*精彩瞬间*/
+.schoolAlbum {
+    height: 270px;
+    margin: 13px 0px 20px 0px;
+}
+
+.img_default_tc {
+    width: 281px;
+    height: 186px;
+  /*   background-image: url("../images/ax_ablum.png"); */
+    display: inline-block;
+/*     background-image: url("../images/img_default.png"); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-right: 18px;
+}
+
+.img_default_tc img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #DEDEDE;
+}
+
+.tc {
+    height: 230px;
+    padding: 10px;
+}
+
+.tempWrap {
+    width: 1200px !important;
+}
+
+.tc_title {
+    padding-top: 8px;
+    font-size: 18px;
+    text-align: center;
+    color: #3E3E3E;
+}
+
+/*中间部分*/
+.middle_box {
+    height: 690px;
+    margin: 20px 0px 20px 0px;
+}
+
+.box {
+    width: 410px;
+    height: 650px;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    background-image: url("../images/box_bg.png");
+}
+
+.history {
+    height: 246px;
+    border: 1px solid #DEDEDE;
+    background: #fff;
+    padding-left: 10px;
+}
+
+.recommend {
+    height: 355px;
+    margin: 20px 0px 20px 0px;
+    border: 1px solid #DEDEDE;
+    text-align: center;
+    background: #fff;
+}
+
+.recom_detail {
+    width: 240px;
+    height: 33px;
+    line-height: 33px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    border: 1px solid #DEDEDE;
+    text-align: left;
+}
+
+.recom_detail img {
+    margin: 0px 8px 0px 12px;
+    vertical-align: middle;
+}
+
+.jywz {
+    width: 270px;
+    line-height: 41px;
+    text-align: center;
+    border: 1px solid #A670C4;
+    background: #F1EBF5;
+    color: #A670C4;
+    cursor: pointer;
+}
+
+.hyzx {
+    height: 235px;
+    margin-top: -9px;
+}
+
+.hyzx .list dl dt {
+    border-bottom: 1px dashed #8E4DB5;
+}
+
+.hyzx .list dl dt span {
+    color: #773C98;
+}
+
+.czrz {
+    height: 300px;
+}
+
+.class-circle {
+    width: 324px;
+    height: 638px;
+    border: 1px solid #37b156;
+    background-color: #fff;
+}
+
+.study-res {
+    border-top: none;
+}
+
+.teacher-item {
+    padding: 15px 0 10px 0;
+    border-bottom: 1px dashed #ccc;
+    overflow: hidden;
+    height: 87px;
+    color: #753E99;
+    width: 400px;
+}
+
+.teacher-header {
+    float: left;
+}
+
+.teacher-info {
+    float: left;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.teacher-header img {
+    width: 34px;
+    height: 34px;
+}
+
+.teacher-detail {
+    line-height: 25px;
+
+}
+
+.jsfz {
+    height: 580px;
+    padding: 10px;
+}
+
+.jsfz .list dl dt {
+    line-height: 49px;
+    height: 49px;
+}
+
+.jsfz .list dl dt .right {
+    font-size: 13px;
+}
+
+.bjq {
+    border: 1px solid #DEDEDE;
+    height: 570px;
+    background: #fff;
+}
+
+.study-res {
+    height: 300px;
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+}
+
+.xzxx,
+.fsyj {
+    width: 209px;
+    height: 55px;
+    border: 1px solid #DEDEDE;
+    float: left;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.xzxx {
+    margin-right: 17px;
+    background-image: url("../images/xzxx.png");
+}
+
+.fsyj {
+    background-image: url("../images/fsyj.png");
+}
+
+.bjq_ {
+    width: 345px;
+    height: 202px;
+    margin: 17px 0px 0px 70px;
+}
+
+.bjq_box {
+    width: 315px;
+    height: 215px;
+}
+
+.bjq_ img {
+    position: relative;
+}
+
+.img_default_sx {
+    position: absolute;
+    display: inline-block;
+    width: 260px;
+    height: 175px;
+    background-image: url(../images/ax_video.png);
+    margin: 14px 47px 5px 14px;
+}
+
+.img_default_sx img {
+    width: 100%;
+    height: 100%;
+}
+
+/*底部*/
+.copys {
+    height: 180px;
+    background-color: #ECECEC;
+    color: #000;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.copys .copys_info {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.copys .copys_info img {
+    vertical-align: middle;
+    margin-top: 35px;
+    width: 80px;
+    height: 80px;
+    margin-left: 17px;
+}
+
+.copys_info div.yc_ewm {
+    margin: 18px 0px 0px 50px;
+}
+
+.copys .copys_info p.p1 {
+    margin-top: 42px;
+}
+
+.jt {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.work_content a,
+.work_content i,
+.list a,
+.list i {
+    color: #000 !important;
+}

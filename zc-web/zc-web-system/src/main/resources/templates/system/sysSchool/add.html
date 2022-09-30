@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="public/public_css::pub_css"></head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+canvas#canvas4 {
+	position: relative;
+	top: 20px;
+}
+</style>
+<link th:href="@{/plugs/bootstrap-fileinput/css/fileinput.css}"
+	media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+	<!-- TOP NAVBAR -->
+	<div th:replace="public/public::top"></div>
+	<!-- /END OF TOP NAVBAR -->
+
+	<!-- SIDE MENU -->
+	<div th:replace="public/public::left(activeUri='system')"></div>
+	<!-- END OF SIDE MENU -->
+
+	<!--  PAPER WRAP -->
+	<div class="wrap-fluid">
+		<div class="container-fluid paper-wrap bevel tlbr">
+
+
+			<!-- CONTENT -->
+			<!--TITLE -->
+			<div th:replace="public/public::title"></div>
+			<!--/ TITLE -->
+
+			<!-- BREADCRUMB -->
+			<div th:replace="public/public::menu"></div>
+			<!-- END OF BREADCRUMB -->
+
+			<div class="content-wrap">
+				<div class="row">
+
+
+					<div class="col-sm-12">
+						<!-- BLANK PAGE-->
+
+						<div style="margin: -20px 15px;" class="nest" id="Blank_PageClose">
+							<div class="title-alt">
+								<h6>角色信息</h6>
+								<div class="titleClose">
+									<a class="gone" href="#Blank_PageClose"> <span
+										class="entypo-cancel"></span>
+									</a>
+								</div>
+								<div class="titleToggle">
+									<a class="nav-toggle-alt" href="#Blank_Page_Content"> <span
+										class="entypo-up-open"></span>
+									</a>
+								</div>
+
+							</div>
+
+
+							<div class="body-nest" id="Blank_Page_Content">
+								<div class="row">
+									<!-- edit form column -->
+									<div class="col-md-12 personal-info">
+										<form class="form-horizontal" enctype="multipart/form-data"
+											id="sysSchoolForm" th:action="@{/admin/sysSchool}"
+											method="post">
+											<input type="hidden" name="_method" value="put"
+												th:if="${sysSchool!=null}" /> <input type="hidden"
+												name="id" th:if="${sysSchool!=null}"
+												th:value="${sysSchool.id}">
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">学校名称：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="name" placeholder="学校名称"
+														name="name"
+														th:value="${sysSchool!=null}?${sysSchool.name}"
+														required="required">
+												</div>
+											</div>
+											<input type="hidden" name="hidname" id="hidname"
+												th:value="${sysSchool!=null}?${sysSchool.name}">
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">学校地址：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="address" placeholder="学校地址"
+														name="address"
+														th:value="${sysSchool!=null}?${sysSchool.address}"
+														required="required">
+												</div>
+											</div>
+
+										<div class="form-group">
+												<label class="col-lg-1 control-label">所属地区：</label>
+												<div  id="distpicker" class="col-lg-6">
+														<div  class="col-lg-4">
+														<select class="form-control"  name="province" id="province1"></select>
+														</div>
+														<div  class="col-lg-4">
+														<select class="form-control" name="city" id="city1"></select>
+														</div>
+														<div  class="col-lg-4">
+														<select class="form-control" name="district" id="district1"></select>
+														</div>
+													</div>
+											</div>
+											<input type="hidden" id="hidprovince" th:value="${sysSchool!=null}?${sysSchool.province}">
+											<input type="hidden" id="hidcity" th:value="${sysSchool!=null}?${sysSchool.city}">
+											<input type="hidden" id="hiddistrict" th:value="${sysSchool!=null}?${sysSchool.district}">
+
+
+
+										<div class="form-group">
+												<label class="col-lg-1 control-label">学校负责人：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="personLiable" placeholder="学校负责人"
+														name="personLiable"
+														th:value="${sysSchool!=null}?${sysSchool.personLiable}"
+														required="required">
+												</div>
+											</div>
+
+										<div class="form-group">
+												<label class="col-lg-1 control-label">座机：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="landine" placeholder="座机"
+														name="landine"
+														th:value="${sysSchool!=null}?${sysSchool.landine}"
+														required="required">
+												</div>
+											</div>
+
+										<div class="form-group">
+												<label class="col-lg-1 control-label">联系电话：</label>
+												<div class="col-lg-6">
+													<input class="form-control" id="contactNumber" placeholder="座机"
+														name="contactNumber"
+														th:value="${sysSchool!=null}?${sysSchool.contactNumber}"
+														required="required">
+												</div>
+											</div>
+
+
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">使用状态：</label>
+												<div class="col-lg-6">
+													<div class="ui-select">
+														<select name="isDisable" id="isDisable"
+															class="form-control" required>
+															<option value="false"
+																th:selected="${sysSchool!=null}?${sysSchool.isDisable eq false}">启用中</option>
+															<option value="true"
+																th:selected="${sysSchool!=null}?${sysSchool.isDisable eq true}">禁用中</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label">描述：</label>
+												<div class="col-lg-6">
+
+													<textarea rows="5" id="description" class="col-lg-12"
+														name="description" placeholder="描述"
+														th:text="${sysSchool!=null}?${sysSchool.description }">
+													</textarea>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-lg-1 control-label"></label>
+												<div class="col-md-8">
+													<button type="submit" class="btn btn-success"
+														th:text="${sysSchool!=null?'修改':'添加'}"></button>
+													<span></span> <input th:if="${sysSchool} eq null"
+														class="btn btn-default" value="重置" type="reset">
+												</div>
+											</div>
+
+
+
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END OF BLANK PAGE -->
+
+				</div>
+			</div>
+
+			<!--/row-->
+		</div>
+	</div>
+	<!--  END OF PAPER WRAP -->
+	<!-- 右侧隐藏菜单start -->
+	<div th:replace="public/public::right"></div>
+	<!-- 右侧隐藏菜单end-->
+	<!-- 底部js -->
+	<div th:replace="public/public_js::pub_js"></div>
+	<div th:replace="public/public_js::public_script"></div>
+	<div th:replace="public/public::footer"></div>
+	<div th:replace="public/public::myModal"></div>
+	<script th:src="@{/plugs/bootstrap-fileinput/js/fileinput.js}"
+		type="text/javascript"></script>
+	<!-- Jquery Validate -->
+	<script type="text/javascript"
+		th:src="@{/plugs/validate/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugs/validate/messages_zh.min.js}"></script>
+
+	<script type="text/javascript"
+		th:src="@{/plugs/distpicker/js/distpicker.data.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/plugs/distpicker/js/distpicker.js}"></script>
+
+
+
+	<script type="text/javascript" th:inline="javascript"
+		th:src="@{/js/system/sysSchool/sysSchool.js}"></script>
+	<div th:replace="public/public_js::validator"></div>
+</body>
+
+</html>

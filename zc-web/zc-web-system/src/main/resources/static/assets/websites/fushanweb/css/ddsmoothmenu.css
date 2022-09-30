@@ -1,0 +1,134 @@
+.ddsmoothmenu {
+    font: 14px Verdana;
+    background: #765FA3;
+    height: 38px;
+    line-height: 38px;
+    width: 1200px;
+    margin: 0 auto;
+    /*min-width: 1200px;*/
+    /*box-shadow: 1px 1px 7px #999;*/
+}
+
+.ddsmoothmenu>ul {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.ddsmoothmenu ul {
+    z-index: 100;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ddsmoothmenu ul li {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 109px;
+    text-align: center;
+    line-height: 38px;
+}
+
+.ddsmoothmenu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+* html .ddsmoothmenu ul li a {
+    /*IE6 hack to get sub menu links to behave correctly*/
+    display: inline-block;
+}
+
+.ddsmoothmenu ul li a:link,
+.ddsmoothmenu ul li a:visited {
+    color: #fff;
+}
+
+.ddsmoothmenu ul li a.selected {
+    /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+    background: #66538B;
+    color: white;
+}
+
+.ddsmoothmenu ul li a:hover {
+    color: #fff;
+    background-color: #66538B;
+    cursor: pointer;
+}
+
+.ddsmoothmenu ul li ul {
+    position: absolute;
+    left: 0;
+    margin-top: 3px;
+    display: none;
+    /*collapse all sub menus to begin with*/
+    visibility: hidden;
+    background: #765FA3;
+}
+
+.ddsmoothmenu ul li ul li {
+    display: list-item;
+    float: none;
+    margin-top: -3px;
+}
+
+.ddsmoothmenu ul li ul li ul {
+    top: 0;
+}
+
+.ddsmoothmenu ul li ul li a {
+    display: inline-block;
+    font: normal 13px Verdana;
+    width: 110px;
+    /*width of sub menus*/
+    height: 38px;
+    line-height: 38px;
+    margin: 0;
+    border-top-width: 0;
+    background: #765FA3;
+    border-bottom: 1px dashed #fff;
+}
+
+.ddsmoothmenu ul li ul li a:hover {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    background: #66538B;
+}
+
+* html .ddsmoothmenu {
+    height: 1%;
+}
+
+/*Holly Hack for IE7 and below*/
+.downarrowclass {
+    position: absolute;
+    top: 18px;
+    right: 7px;
+}
+
+.rightarrowclass {
+    position: absolute;
+    top: 12px;
+    right: 5px;
+}
+
+.ddshadow {
+    /*shadow for NON CSS3 capable browsers*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background: silver;
+}
+
+.toplevelshadow {
+    /*shadow opacity for NON CSS3 capable browsers. Doesn't work in IE*/
+    opacity: 0.8;
+}
+
+._active {
+    background: #66538B;
+}

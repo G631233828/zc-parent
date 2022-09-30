@@ -1,0 +1,295 @@
+.main_gallery{
+    overflow: hidden;
+}
+.main_title{
+    height: 60px;
+    line-height: 60px;
+}
+.gallery_date{
+    width: 78px;
+    height: 25px;
+    background-color: rgba(0,0,0,0.7);;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 3px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    overflow: hidden;
+}
+.main_gallery .gallery_detail_new{
+    width: 19%;
+    border: 1px solid #efefef;
+    height: 207px;
+    float: left;
+    margin-right: 0.8%;
+    margin-bottom: 2%;
+}
+.main_gallery .gallery_detail_new img, .main_gallery .gallery_detail img{
+    width: 100%;
+    /*height: 160px;*/
+}
+.main_gallery .gallery_detail_new p{
+   text-align: center;
+   line-height: 40px;
+   font-size: 16px;
+}
+
+.main_gallery .gallery_detail{
+    width: 19%;
+    border: 1px solid #efefef;
+    height: 200px;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 22px;
+}
+.main_gallery .gallery_detail p{
+   text-align: center;
+   line-height: 30px;
+   font-size: 16px;
+}
+.count{
+    color: #a2a2a2;
+}
+
+/*视频*/
+.wond_first{
+    width: 48%;
+    border: 1px solid #cacaca;
+    height: 338px;
+    padding: 3px;
+    position: relative;
+    margin-right: 1%;
+    float: left;
+}
+.wond_first img{
+    width: 100%;
+    height: 100%;
+}
+.wond_vedio_title{
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 4.8px;
+    margin-right: 2px;
+    color: #fff;
+    width: 98.5%;
+    background-color: rgba(0,0,0,0.3);
+    text-indent: 5px;
+}
+.vedio_wond .vedio_item{
+    overflow: hidden;
+    width: 50%;
+    float: right;
+}
+.vedio_wond .vedio_item .vedio_detail{
+    border: 1px solid #cacaca;
+    height: 160px;
+    padding: 3px;
+    position: relative;
+    margin-right: 2%;
+    float: left;
+    margin-bottom: 10px;
+    width: 47%;
+}
+.vedio_detail img{
+    width: 100%;
+    height: 100%;
+}
+.vedio_title{
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 4px;
+    margin-right: 2px;
+    color: #fff;
+    width: 97.5%;
+    background-color: rgba(0,0,0,0.3);
+    text-indent: 5px;
+}
+.column_vedio{
+    overflow: hidden;
+}
+.column_vedio .vedio_item{
+    overflow: hidden;
+    float: left;
+    width: 76%;
+}
+.column_vedio .vedio_item .vedio_detail{
+    border: 1px solid #cacaca;
+    height: 160px;
+    padding: 3px;
+    position: relative;
+    margin-right: 1%;
+    float: left;
+    margin-bottom: 10px;
+    width: 31%;
+}
+.vedio_list{
+    width: 24%;
+    float: right;
+}
+.vedio_list p{
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+.vedio_list dl dt{
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px dashed #e9e9e9; 
+}
+
+.vedio_list dt a b{
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	color: white;
+	margin-right: 4px;
+}
+
+.vedio_play{
+    border: 1px solid #dedfe3;
+    float: left;
+    width: 72%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-right: 3%;
+    min-width: 640px;
+    text-align: center;
+}
+
+/*微课*/
+.left_nav{
+    float: left;
+    width: 16%;
+    margin-right: 2%;
+    height: 766px;
+}
+.course_nav p, .course_hot p{
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.course_nav dl dt{
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px dashed #e9e9e9; 
+    font-size: 16px;
+    padding-left: 35px;
+}
+.course_nav dl dt :hover{
+    background-color: #f5f5f5;
+}
+.course_hot dl dt{
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    padding-left: 12px;
+}
+.course_content{
+    width: 81%;
+    float: left;
+}
+.course_detail{
+    border: 1px solid #eeeeee;
+    width: 22%;
+    float: left;
+    padding: 2px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.course_detail img{
+    width: 100%;
+    /*height: 150px;*/
+}
+.course_detail .course_title{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.course_info {
+	float: right;
+	width: 520px;
+	height: 360px;
+	margin-left: 38px;
+	position: relative;
+}
+.course_info h2{
+	margin: 20px 0;
+	line-height:35px;
+}
+.course_info button{
+	width: 150px;
+	height: 45px;
+	outline: none;
+	line-height:45px;
+	text-align: center;
+	background-color: #D70D16;
+	border: 1px solid #D70D16;
+	color: #fff;
+	font-size: 18px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.lecturer{
+	margin: 25px 0 20px;
+	overflow: hidden;
+}
+.lecturer img{
+	width: 80px;
+	height: 80px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+.lecturer div.left h3{
+	margin: 15px 0 10px;
+}
+.course_description{
+	margin-top: 20px;
+	margin-bottom: -20px;
+	overflow: hidden;
+	height: 152px;
+}
+.course_description div.left,.course_description div.right{
+	border: 1px solid #E0E0E0;
+	height: 150px;
+}
+.course_description div.left{
+	width: 76.5%;
+}
+.course_description div.right{
+	width: 20%;
+	padding: 0 10px;
+}
+.course_synopsis{
+	height: 50px;
+	line-height: 50px;
+	width: 130px;
+	text-align: center;
+	color: #D70D16;
+	border-top: 2px solid #D70D16;
+	font-size: 16px;
+	font-weight: bold;
+}
+.related_courses div{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.related_courses div img{
+	width: 95%;
+	height: 75px;
+	cursor: pointer;
+}

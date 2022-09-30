@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="public/public_css::pub_css"></head>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{/assets/css/signin.css}">
+</head>
+
+
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+
+	<div class="container">
+
+
+
+		<div class="" id="login-wrapper" style="margin-top: 20%;">
+			<div class="row">
+				<div class="col-md-5 col-md-offset-4">
+					<div id="logo-login">
+						<h1>中赤信息技术 (系统管理员)</h1>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-md-5 col-md-offset-4">
+					<div class="account-box">
+						<form role="form" th:action="@{/system/tologin}" method="post">
+
+							<div class="alert alert-danger" th:if="${msg != null}">
+								<button data-dismiss="alert" class="close" type="button">×</button>
+								<span class="entypo-attention"></span> <strong th:text="${msg}"></strong>
+							</div>
+
+							<div class="form-group">
+								<!--a href="#" class="pull-right label-forgot">Forgot email?</a-->
+								<label for="inputAccountName">帐号</label> <input type="text"
+									name="accountName" placeholder="账号" id="inputAccountName"
+									class="form-control">
+							</div>
+							<div class="form-group">
+								<!--a href="#" class="pull-right label-forgot">Forgot password?</a-->
+								<label for="inputPassword">密码</label> <input type="password"
+									placeholder="密码" id="inputPassword" name="passWord"
+									class="form-control">
+							</div>
+
+
+							<div class="checkbox pull-left">
+								<label> <input type="checkbox" name="rememberMe">记住我
+								</label>
+							</div>
+							<button class="btn btn btn-primary pull-right" type="submit">
+								登 录</button>
+						</form>
+						<a class="forgotLnk" href="index.html"></a>
+
+						<div class="row-block">
+							<div class="row"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p>&nbsp;</p>
+		<div style="text-align: center; margin: 0 auto;">
+			<h6 style="color: #fff;">
+				Copyright(C)2020 <b /> 中赤信息技术（上海）有限公司
+			</h6>
+		</div>
+
+	</div>
+
+	<!-- MAIN EFFECT -->
+	<!-- 底部js -->
+	<div th:replace="public/public_js::pub_js"></div>
+
+
+
+</body>
+
+</html>

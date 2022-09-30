@@ -1,0 +1,275 @@
+.display_none {
+    display: none;
+}
+
+.main_info_nav {
+    height: 45px;
+    line-height: 42px;
+    margin: 10px auto;
+    border: 1px solid #D8D8D8;
+    width: 1200px;
+    position: relative;
+}
+
+.main_info_nav b {
+    cursor: pointer;
+    display: inline-block;
+    width: 116px;
+    text-align: center;
+    color: #282828;
+    height: 44px;
+    overflow: hidden;
+}
+
+.main_info_nav_active {
+    background-color: #fff;
+    border-bottom: 0;
+}
+
+.lanmu_info {
+    margin: 10px auto;
+}
+
+.lanmu_info>.left {
+    width: 70%;
+    height: auto;
+}
+
+.lanmu_info>.right {
+    width: 29%;
+    height: auto;
+}
+
+.lanmu_info .left>img {
+    width: 200px;
+    height: 130px;
+    margin-right: 20px;
+}
+
+.lanmu_info .left .zixun_neirong {
+    overflow: hidden;
+}
+
+.lanmu_info .left .zixun_neirong>div.show_less {
+    text-indent: 2em;
+}
+
+.lanmu_info .left>div>div {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+
+/*最后一个栏目，更多*/
+
+.last_navlist {
+    /*position: relative;*/
+}
+
+.more_list {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    right: 1px;
+    top: 46px;
+    width: 116px;
+    text-align: center;
+    list-style: none;
+    background-color: #ECECEC;
+    z-index: 1;
+}
+
+.more_list li {
+    height: 44px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*每月热门点击*/
+
+.remen_dianji {
+    margin-bottom: 20px;
+}
+
+.remen_dianji h3,
+.tuijian_wenzhang h3 {
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.remen_dianji p,
+.tuijian_wenzhang p {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px dashed #F3F3F3;
+}
+
+.remen_dianji p:last-of-type,
+.tuijian_wenzhang p:last-of-type {
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.remen_dianji p a span {
+    color: #646464;
+    display: inline-block;
+    line-height: 15px;
+}
+
+.remen_dianji p a b {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: white;
+    margin-right: 4px;
+    vertical-align: text-top;
+    position: relative;
+    top: -2px;
+}
+
+.tuijian_wenzhang a {
+    color: #333;
+    margin-left: 30px;
+}
+
+.tuijian_wenzhang .shuxian {
+    display: inline-block;
+    height: 80%;
+    margin-top: 3px;
+    float: left;
+}
+
+.tuijian_wenzhang p a {
+    display: inline-block;
+    width: 88%;
+}
+
+
+/*新闻栏目导航*/
+
+.nav_news {
+    width: 1200px;
+    height: 200px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+.nav_news ul {
+    float: left;
+}
+
+.nav_news ul li {
+    float: left;
+    width: 120px;
+    line-height: 40px;
+    position: relative;
+    background-color: #F8F8F8;
+}
+
+.nav_news .nav_first {
+    border-left: 1px dotted #EAEAEA;
+}
+
+.nav_news ul li a {
+    color: #666;
+    display: block;
+    font-family: Microsoft YaHei;
+    border: 1px dotted #EAEAEA;
+    border-left: none;
+}
+
+.nav_news ul li a:hover {
+    color: #000;
+}
+
+.nav_news ul li .active {
+    background-color: #D8450B;
+    border: 1px solid #D8450B;
+    color: #EEE;
+}
+
+.nav_news ul li .active:hover {
+    background-color: #D8450B;
+    color: #EEE;
+}
+
+.nav_news ul li:hover .sub_nav,
+.nav_news ul li ul li:hover .sub_son_nav {
+    display: block;
+}
+
+.nav_news .sub_nav {
+    position: absolute;
+    width: 110px;
+    display: none;
+    left: -1px;
+}
+
+.nav_news .sub_son_nav {
+    position: absolute;
+    width: 110px;
+    display: none;
+    left: 120px;
+    top: 0;
+}
+
+.nav_news .sub_nav li {
+    text-align: left;
+    width: 120px;
+}
+
+.nav_news .sub_nav b {
+    width: 15px;
+    background-color: #CCC;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.nav_news .sub_nav li a {
+    border-top: none;
+}
+
+.nav_news .sub_nav li .sub_nav_last {
+    border-bottom: none;
+}
+
+.nav_news .sub_nav li a:hover b {
+    background-color: #999;
+}
+
+.nav_news .sub_nav li .sub_active {}
+
+.nav_news .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-top-color: #777777;
+    margin-left: 15px;
+    margin-top: -3px;
+}
+
+.nav_news .caret_r {
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -3px;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 0;
+    border-width: 4px;
+    border-color: #777777;
+    border-right-width: 0;
+    border-style: dashed;
+    border-left-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}

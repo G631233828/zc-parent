@@ -1,0 +1,359 @@
+/*视频 图册 微课*/
+.vedio_list p {
+    background-color: #743C95;
+}
+
+.vedio_list dt a b {
+    background-color: #aaa;
+}
+
+.vedio_list dt .top3 {
+    background-color: #743C95;
+}
+
+.list_title {
+    color: #717171;
+}
+
+.course_nav p,
+.course_hot p {
+    background-color: #743C95;
+}
+
+.publish {
+    background-color: #ff3366;
+}
+
+.respond {
+    color: #26d0ff;
+}
+
+.info .info_top_concent a {
+    border: 1px solid #EB304D;
+}
+
+.tomore {
+    background-color: #743C95;
+}
+
+/*导航*/
+.header {
+    /*background-color: #F4F4F4;*/
+}
+
+/*登录条*/
+.baudu div.right span {
+    background-color: #743C95;
+}
+
+.login .denglu {
+    color: #F9FB06;
+}
+
+/*导航*/
+.nav_active {
+    background-color: #89CA81;
+}
+
+.nav a {
+    color: #6E6E6E;
+}
+
+.main_info_nav_active {
+    border-top: 3px solid #743C95;
+    color: #743C95 !important;
+}
+
+.remen_dianji h3,
+.tuijian_wenzhang h3 {
+    background-color: #743C95;
+}
+
+.remen_dianji .top3 {
+    background-color: #743C95;
+}
+
+.tuijian_wenzhang .shuxian {
+    border-left: 2px solid #1F9FFF;
+}
+
+.tuijian_wenzhang h3 {
+    background-color: #743C95;
+    ;
+}
+
+.fabiao {
+    background-color: #FF3366;
+}
+
+.respond_btn {
+    background-color: #3E73A0;
+}
+
+.cancel_btn {
+    background-color: #3E73A0;
+}
+
+.tomore {
+    background-color: #743C95;
+}
+
+.sub {
+    background-color: #743C95;
+}
+
+.blog_title {
+    background-color: #ccc;
+}
+
+.yichu5 {
+    color: #646464;
+}
+
+.info .info_top_concent a {
+    color: #EF7286;
+}
+
+.info_middle_contont p.more {
+    background-color: #EB304D;
+}
+
+.sever>a {
+    background-color: #aaa;
+}
+
+.form .form_cont a {
+    background-color: #743C95;
+}
+
+/*工作室*/
+.workroom_l h3 {
+    background-color: #743C95;
+}
+
+.search .s_tijiao {
+    background-color: #743C95;
+}
+
+.remen_dianji h3 {
+    background-color: #743C95;
+}
+
+.workroom_m .workroom_head {
+    background-color: #F0F0F0;
+}
+
+.remen_dianji .top3 {
+    background-color: #743C95;
+}
+
+.remen_dianji p a b {
+    background-color: #aaa;
+}
+
+.main_info_nav {
+    background-color: #ECECEC;
+}
+
+/*底部*/
+/*.footer{
+	background-color: #743C95;
+}*/
+.footer_support {
+    color: #fff;
+}
+
+.footer_admin {
+    color: #E2F447;
+}
+
+.title {
+    color: #E2F447;
+}
+
+.guild {
+    color: #743C95;
+}
+
+.click_num {
+    color: #EC8A89;
+}
+
+/*鼠标移上变色*/
+.blog_list p a:hover {
+    color: #5EDFFF;
+}
+
+.sever>a:hover {
+    background-color: #eb304d;
+}
+
+.workroom_l ul li:hover {
+    color: #743C95;
+}
+
+.submenu a:hover {
+    /*background: #b63b4d;*/
+    color: #743C95;
+}
+
+.remen_dianji p a span:hover {
+    color: #743C95;
+}
+
+.work_content a:hover {
+    cursor: pointer;
+    color: #743C95;
+}
+
+.list_title:hover {
+    color: #743C95;
+}
+
+.wond_first:hover {
+    border-color: #ffc657;
+}
+
+.vedio_wond .vedio_item .vedio_detail:hover,
+.column_vedio .vedio_item .vedio_detail:hover {
+    border-color: #ffc657;
+}
+
+.pages #Pagination .pagination .current {
+    background: #743C95;
+    color: #fff;
+}
+
+.pages #Pagination .pagination a,
+.pages #Pagination .pagination span {
+    color: #743C95;
+}
+
+.shu_color {
+    color: #743C95;
+}
+
+.plus_color {
+    color: #743C95;
+}
+
+.main_nav {
+    background-color: #743C95;
+}
+
+.title_l {
+    background: #f7d9c3;
+}
+
+.work_l {
+    border: 1px solid #743C95;
+}
+
+.work_c {
+    border: 1px solid #743C95;
+}
+
+.line2 {
+    border-left: 3px solid #743C95;
+}
+
+.more_detail {
+    border: 1px solid #743C95;
+}
+
+.list_left {
+    border: 1px solid #743C95;
+}
+
+.list_center .title_list {
+    border-bottom: 1px solid #743C95;
+}
+
+.work_person {
+    border: 1px solid #743C95;
+}
+
+.work_title .title_list {
+    border-bottom: 1px solid #743C95;
+}
+
+.work_article>h2 {
+    border-bottom: 1px dashed #743C95;
+}
+
+.work_content a {
+    color: #787878;
+}
+
+.work_article ul li a {
+    color: #787878;
+}
+
+.work_article a:hover {
+    color: #743C95;
+}
+
+.list_r_content {
+    color: #787878;
+}
+
+.list_r_content:hover {
+    color: #743C95;
+}
+
+.more_list {
+    background-color: #fff;
+}
+
+.more_list b {
+    /*font-weight: normal;*/
+    color: #743C95 !important;
+}
+
+.list a {
+    color: #787878;
+}
+
+.list a:hover {
+    color: #743C95;
+}
+
+.tuijian_wenzhang p a:hover {
+    color: #743C95 !important;
+}
+
+.respond {
+    color: #743C95;
+}
+
+.breadcrumb>.active {
+    color: #743C95;
+}
+
+.more_list_studio {
+    background-color: #743C95;
+}
+
+.course_hot dl dt {
+    color: #717171;
+}
+
+.course_hot dl dt a span:hover {
+    color: #743C95;
+}
+
+.breadcrumb>li>.divider {
+    color: #743C95;
+}
+
+.view_cont {
+    border: 1px solid #743C95;
+}
+
+.view_type span {
+    color: #743C95;
+}
+
+.btn_tj {
+    background-color: #743C95;
+}

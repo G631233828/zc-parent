@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>zhongchiedu.com</groupId>
+		<artifactId>zc-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>zc-service-api</artifactId>
+	<packaging>pom</packaging>
+
+
+
+	<dependencies>
+
+		<!--通用的common 要有feign的依赖 -->
+		<dependency>
+			<groupId>zhongchiedu.com</groupId>
+			<artifactId>zc-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!--每个工程都有Pojo，都需要用到该包对应的注解 -->
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+
+
+
+
+
+
+	<modules>
+		<module>zc-service-system-api</module>
+		<module>zc-service-file-api</module>
+	</modules>
+</project>

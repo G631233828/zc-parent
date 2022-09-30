@@ -1,0 +1,1178 @@
+/*INDEX鏍峰紡*/
+.header {
+    width: 100%;
+    height: auto;
+}
+
+/* BANNER鏍峰紡 */
+.banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden !important;
+    margin-top: 68px;
+    position: relative;
+}
+
+.bannerBox {
+    width: 100%;
+    height: 100%;
+}
+
+.bannerBox li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.bannerBox img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bannerCtrl {
+    display: block;
+    width: 122px;
+    height: 28px;
+    background-image: url(../images/bannerCtrlBg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -61px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bannerCtrl li {
+    float: left;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #ededed;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.bannerCtrl .bannerCtrlCurrent {
+    background-color: #2e75b6;
+}
+
+.bannerCtrl li:nth-child(2) {
+    margin-left: 26px;
+}
+
+.bannerCtrl li:nth-child(3) {
+    margin-left: 26px;
+}
+
+/* LOGO鍜孨AV鏍峰紡 */
+.top {
+    width: 100%;
+    height: 68px;
+    background-image: url(../images/topBg.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.topContainer {
+    width: calc(100% - 120px);
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    display: block;
+    width: 548px;
+    height: 162px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    float: right;
+    display: block;
+    /* width: calc(100% - 548px); */
+    margin-top: 0px;
+}
+
+.one li {
+    float: left;
+    display: block;
+    width: 96px;
+    height: 68px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.one a {
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 18px;
+    color: #6890cd;
+    line-height: 68px;
+    text-align: center;
+}
+
+.one .one_li:hover {
+    width: 96px;
+    height: 68px;
+    /* border-radius: 12px; */
+    background-color: #2e75b6;
+}
+
+.one .one_li:hover a {
+    color: #fff;
+}
+
+.one .one_li ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 68px;
+    z-index: 100;
+}
+
+.one .one_li ul li {
+    display: block;
+    width: 96px;
+    height: 34px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: #6890cd 1px solid;
+    margin-top: 4px;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.one .one_li .menu01 li a {
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 14px;
+    color: #6890cd;
+    line-height: 34px;
+    text-align: center;
+}
+
+.one .one_li ul li a:hover {
+    color: #6890cd;
+    text-decoration: underline;
+}
+
+/* 鎵嬫満绔痠pad绔ご閮� */
+.topMobile {
+    width: 100%;
+    height: 68px;
+    background-image: url(../images/topBg.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.topMobile .popup {
+    display: none;
+}
+
+.topContainerMobile {
+    width: 96%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.topContainerMobile .logo {
+    float: left;
+    margin-top: 7px;
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.topContainerMobile .logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.topContainerMobile .nav {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.topContainerMobile .nav img {
+    width: 30px;
+}
+
+/*寮规*/
+.popup {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 295%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50000;
+}
+
+.popupCon {
+    display: block;
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.popupCon ul {
+    display: block;
+    width: 100%;
+    margin-top: 72px;
+}
+
+.popupCon li {
+    display: block;
+    width: 100%;
+    height: 68px;
+    border-bottom: #fff 1px dotted;
+}
+
+.popupCon li a {
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 18px;
+    color: #fff;
+    line-height: 68px;
+    text-align: left;
+}
+
+.popup input {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: url(../images/close.png) no-repeat center #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1499px) {
+    .topMobile {
+        display: none;
+    }
+
+    .top {
+        height: 54px;
+    }
+
+    .logo {
+        width: 400px;
+        height: 126px;
+    }
+
+    .one li {
+        width: 60px;
+        height: 54px;
+    }
+
+    .one a {
+        font-size: 12px;
+        line-height: 54px;
+    }
+
+    .one .one_li:hover {
+        width: 60px;
+        height: 54px;
+    }
+
+    .one .one_li ul {
+        position: absolute;
+        left: 0px;
+        top: 54px;
+    }
+
+    .one .one_li ul li {
+        width: 60px;
+        height: 24px;
+    }
+
+    .one .one_li .menu01 li a {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .topMobile {
+        display: none;
+    }
+}
+
+/* 涓讳綋鍐呭鏍峰紡 */
+.subjectContent {
+    width: 100%;
+}
+
+.subjectContentContainer {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+
+.subjectContentContainerTop {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.demeanor {
+    float: left;
+    display: block;
+    width: calc(33% - 20px);
+    height: 520px;
+    margin-top: 40px;
+}
+
+.demeanorImg {
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: #fff 1px solid;
+    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px #999;
+    position: relative;
+}
+
+.demeanorImg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.demeanorTitle {
+    display: block;
+    width: 100%;
+    height: 36px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.demeanorTitle a {
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 16px;
+    color: #555;
+    line-height: 36px;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+.news {
+    float: left;
+    display: block;
+    width: calc(38% - 40px);
+    height: 520px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.newsContent {
+    width: 100%;
+    height: 100%;
+}
+
+
+.newsContent dl {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.newsContent dt {
+    width: 100%;
+    height: 112px;
+    border-bottom: #e0e0e0 1px dotted;
+}
+
+.newsContent dt a {
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 16px;
+    color: #555;
+    line-height: 30px;
+    text-align: left;
+}
+
+.newsContent dt:hover a {
+    color: #2e75b6;
+}
+
+.newsContent dt span {
+    display: block;
+    font-family: "Arial";
+    font-size: 14px;
+    color: #555;
+    line-height: 30px;
+    text-align: left;
+}
+
+.newsContent dt:hover span {
+    color: #2e75b6;
+}
+
+.newsContent dt p {
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 12px;
+    color: #555;
+    line-height: 24px;
+    text-align: left;
+}
+
+.newsContent dt:hover p {
+    color: #2e75b6;
+}
+
+.newsContent dd {
+    width: 100%;
+    height: 40px;
+    border-bottom: #e0e0e0 1px dotted;
+    overflow: hidden;
+}
+
+.newsContent dd span {
+    float: left;
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 16px;
+    color: #555;
+    line-height: 40px;
+    text-align: left;
+}
+
+.newsContent dd a:hover span {
+    color: #2e75b6;
+}
+
+.newsContent dd p {
+    float: right;
+    display: block;
+    font-family: "Arial";
+    font-size: 14px;
+    color: #555;
+    line-height: 40px;
+    text-align: left;
+}
+
+.newsContent dd a:hover p {
+    color: #2e75b6;
+}
+
+.notices {
+    float: right;
+    display: block;
+    width: calc(29% - 20px);
+    height: 520px;
+    margin-top: 40px;
+}
+
+.noticesContent {
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: #d8e1fc 1px solid;
+}
+
+.noticesContent ul {
+    width: calc(100% - 24px);
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.noticesContent li {
+    width: 100%;
+    height: 40px;
+    border-bottom: #e0e0e0 1px dotted;
+    overflow: hidden;
+}
+
+.noticesContent li span {
+    float: left;
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 16px;
+    color: #555;
+    line-height: 40px;
+    text-align: left;
+}
+
+.noticesContent li a:hover span {
+    color: #2e75b6;
+}
+
+.noticesContent li p {
+    float: right;
+    display: block;
+    font-family: "Arial";
+    font-size: 14px;
+    color: #555;
+    line-height: 40px;
+    text-align: left;
+}
+
+.noticesContent li a:hover p {
+    color: #2e75b6;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+}
+
+.title span {
+    float: left;
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 22px;
+    color: #29156f;
+    line-height: 40px;
+    text-align: left;
+}
+
+.title p {
+    float: left;
+    display: block;
+    font-family: "Arial";
+    font-size: 22px;
+    color: #b5b2b1;
+    line-height: 44px;
+    text-align: left;
+    margin-left: 12PX;
+}
+
+.title a {
+    float: right;
+    display: block;
+    font-family: "寰蒋闆呴粦";
+    font-size: 18px;
+    color: #b5b2b1;
+    line-height: 40px;
+    text-align: right;
+}
+
+.content {
+    display: block;
+    width: 100%;
+    height: 412px;
+    margin-top: 24px;
+}
+
+.subjectContentContainerBomttom {
+    width: 100%;
+}
+
+.icons {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.icons ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+.icons li {
+    float: left;
+    display: block;
+    width: 14%;
+}
+
+.icons li img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+/* 椤佃剼搴曢儴鏍峰紡 */
+.footer {
+    width: 100%;
+    position: relative;
+}
+
+.footer #_ideConac {
+    float: left;
+    margin-left: 30%;
+}
+
+.footerMobile {
+    width: 100%;
+    height: auto;
+    background-color: #2e75b6;
+}
+
+.footerContainer {
+    width: calc(100% - 120px);
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    z-index: 100;
+}
+
+.footerContainerMobile {
+    width: calc(100% - 120px);
+    height: auto;
+    margin: 0 auto;
+    z-index: 100;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footerContainerMobile #_ideConac {
+    float: left;
+}
+
+.links {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+    bottom: -60px;
+    text-align: center;
+    z-index: 9;
+}
+
+.links span {
+    width: 70px;
+    font-family: "寰蒋闆呴粦";
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    text-align: right;
+}
+
+.links select {
+    width: 486px;
+    height: 24px;
+    border: #fff 1px solid;
+    background-color: transparent;
+    font-family: "寰蒋闆呴粦";
+    font-size: 14px;
+    color: #ccc;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.contact {
+    display: block;
+    width: 1024px;
+    color: #fff;
+}
+
+.contact p {
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 16px;
+    color: #fff !important;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.remark {
+    display: block;
+    width: 444px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.remark img {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 48px;
+}
+
+.remarkText {
+    float: left;
+    margin-left: 6px;
+}
+
+.remarkText span {
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    text-align: left;
+}
+
+.remarkOne {
+    width: 100%;
+    overflow: hidden;
+}
+
+.remarkOne img {
+    float: left;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.remarkOne p {
+    float: left;
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 12px;
+    color: #fff;
+    line-height: 8px;
+    text-align: left;
+    margin-left: 6px;
+}
+
+.remarkMobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.remarkMobile img {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 48px;
+}
+
+.remarkTextMobile {
+    float: left;
+    /* margin-left: 6px; */
+    display: block;
+    width: calc(100% - 40px);
+}
+
+.remarkTextMobile span {
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    text-align: left;
+}
+
+.remarkOneMobile {
+    width: 100%;
+    overflow: hidden;
+}
+
+.remarkOneMobile img {
+    float: left;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.remarkOneMobile p {
+    float: left;
+    width: calc(100% - 30px);
+    display: block;
+    font-family: "瀹嬩綋";
+    font-size: 12px;
+    color: #fff;
+    line-height: 8px;
+    text-align: left;
+    margin-left: 6px;
+}
+
+/* 濂旇窇瀹氫綅鏍峰紡 */
+/* .running {
+        display: block;
+        width: 180px;
+        height: 120px;
+        position: absolute;
+        top: 1250px;
+        right: 60px;
+    } */
+
+@media screen and (max-width: 768px) {
+    .tp-simpleresponsive .tp-caption {
+        left: 32px !important;
+    }
+
+    .subjectContentContainer {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    .subjectContentContainerTop {
+        width: 100%;
+        height: auto;
+    }
+
+    .demeanor {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-top: 40px;
+    }
+
+    .demeanorTitle a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .news {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+
+    .newsContent dt a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dt p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dd {
+        width: 100%;
+        height: 40px;
+        border-bottom: #e0e0e0 1px dotted;
+        overflow: hidden;
+    }
+
+    .newsContent dd span {
+        width: 60%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .notices {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-top: 40px;
+    }
+
+    .noticesContent li span {
+        width: 50%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .content {
+        height: 240px;
+    }
+
+    .icons {
+        margin-bottom: 0;
+    }
+
+    .icons li {
+        width: 33.333333%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .links {
+        bottom: -30px;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .links span {
+        display: none;
+        text-align: left;
+    }
+
+    .links select {
+        float: none;
+        display: inline-block;
+        text-align: left;
+        width: 60%;
+    }
+
+    .contact {
+        display: block;
+        width: 100%;
+    }
+
+    .contact p {
+        line-height: 16px;
+        text-align: left;
+    }
+
+    .remark {
+        width: 100%;
+    }
+
+    .footerContainerMobile {
+        padding-top: 40px;
+        width: auto;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .subjectContentContainer {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    .subjectContentContainerTop {
+        width: 100%;
+        height: auto;
+    }
+
+    .demeanor {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-top: 40px;
+    }
+
+    .demeanorTitle a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .news {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+
+    .newsContent dt a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dt p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dd {
+        width: 100%;
+        height: 40px;
+        border-bottom: #e0e0e0 1px dotted;
+        overflow: hidden;
+    }
+
+    .newsContent dd span {
+        width: 60%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .notices {
+        display: block;
+        width: 100%;
+        height: 304px;
+        margin-top: 40px;
+    }
+
+    .noticesContent li span {
+        width: 50%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .content {
+        height: 240px;
+    }
+
+    .icons li {
+        float: left;
+        display: block;
+        width: 30%;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1499px) {
+    .footerMobile {
+        display: none;
+    }
+
+    .subjectContentContainerTop {
+        height: 348px;
+    }
+
+    .demeanor {
+        height: 308px;
+    }
+
+    .demeanorTitle a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .demeanorImg {
+        height: calc(100% - 10px);
+    }
+
+    .news {
+        height: 308px;
+    }
+
+    .newsContent dt a {
+        width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dt p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .newsContent dd {
+        width: 100%;
+        height: 40px;
+        border-bottom: #e0e0e0 1px dotted;
+        overflow: hidden;
+    }
+
+    .newsContent dd span {
+        width: 60%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .notices {
+        height: 308px;
+    }
+
+    .noticesContent li span {
+        width: 50%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .content {
+        height: 244px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .footerMobile {
+        display: none;
+    }
+}
+
+
+.left{
+            width: 300px;
+            height: 100px;
+            background-color: #823384;
+            text-align: center;
+            font-size: 20px;
+            color: #fdf6e3;
+        }
+        .center{
+            height: 100px;
+            background-color: #d29922;
+        }
+        .right{
+            width: 300px;
+            height: 100px;
+            background-color: #0c8ac5;
+            text-align: center;
+            font-size: 20px;
+            color: #fdf6e3;
+        }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

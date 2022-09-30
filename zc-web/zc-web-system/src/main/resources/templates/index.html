@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head th:include="public/public_css::pub_css"></head>
+<head>
+<meta charset="utf-8">
+<link th:href="@{/assets/js/footable/css/footable.core.css?v=2-0-1}"
+	rel="stylesheet" type="text/css">
+<link th:href="@{/assets/js/footable/css/footable.standalone.css}"
+	rel="stylesheet" type="text/css">
+<link th:href="@{/assets/js/footable/css/footable-demos.css}"
+	rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+	<!-- TOP NAVBAR -->
+	<div th:replace="public/public::top"></div>
+	<!-- /END OF TOP NAVBAR -->
+
+	<!-- SIDE MENU -->
+	<div th:replace="public/public::left(activeUri='')"></div>
+	<!-- END OF SIDE MENU -->
+
+	<!--  PAPER WRAP -->
+	<div class="wrap-fluid">
+		<div class="container-fluid paper-wrap bevel tlbr">
+
+
+			<!-- CONTENT -->
+			<!--TITLE -->
+			<div th:replace="public/public::title"></div>
+			<!--/ TITLE -->
+
+			<!-- BREADCRUMB 
+			<div th:replace="public/public::menu"></div>-->
+			<!-- END OF BREADCRUMB -->
+
+
+
+		<div class="content-wrap">
+                <!-- <div class="row">
+                    <div class="col-lg-3">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                	   <span>  昨日新增文章数量</span>
+                                </h3>
+                            </div>
+                            <div class="value">
+                                <div id="getting-started"><span>20</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                	   <span>  昨日新增文章数量</span>
+                                </h3>
+                            </div>
+                            <div class="value">
+                                <div id="getting-started"><span>20</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                	   <span>  昨日新增文章数量</span>
+                                </h3>
+                            </div>
+                            <div class="value">
+                                <div id="getting-started"><span>20</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="profit" id="profitClose">
+                            <div class="headline ">
+                                <h3>
+                                	   <span>  昨日新增文章数量</span>
+                                </h3>
+                            </div>
+                            <div class="value">
+                                <div id="getting-started"><span>20</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+			<div th:replace="public/public::myModal"></div>
+		</div>
+	</div>
+	<!--  END OF PAPER WRAP -->
+	<!-- 右侧隐藏菜单start -->
+	<div th:replace="public/public::right"></div>
+	<!-- 右侧隐藏菜单end-->
+	<!-- 底部js -->
+	<div th:replace="public/public_js::pub_js"></div>
+	<div th:replace="public/public_js::public_script"></div>
+	<div th:replace="public/public::footer"></div>
+		<div th:replace="public/public_js::validator"></div>
+	<!-- GAGE -->
+	<script type="text/javascript" th:src="@{/assets/js/toggle_close.js}"></script>
+
+
+
+</body>
+
+</html>

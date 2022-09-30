@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<body>
+
+	<!--  top start  -->
+	<nav role="navigation" class="navbar navbar-static-top"
+		th:fragment="top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button data-target="#bs-example-navbar-collapse-1"
+					data-toggle="collapse" class="navbar-toggle" type="button">
+					<span class="entypo-menu"></span>
+				</button>
+				<!-- 		<button class="navbar-toggle toggle-menu-mobile toggle-left"
+					type="button">
+					<span class="entypo-list-add"></span> -->
+
+
+
+
+				<div id="logo-mobile" class="visible-xs">
+					<h1>
+						WEB管理<span>v1.2</span>
+					</h1>
+				</div>
+
+			</div>
+
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div id="bs-example-navbar-collapse-1"
+				class="collapse navbar-collapse">
+				<ul style="margin-right: 0;" class="nav navbar-nav navbar-right">
+					<li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<img alt="" class="admin-pic img-circle"
+							th:src="${session.sysuser_session?.photograph}!=null?${session.sysuser_session?.photograph?.savePath }+'/'+${session.sysuser_session?.photograph?.generateName }:'http://api.randomuser.me/portraits/thumb/men/10.jpg'">Hi,[[${session.sysuser_session?.userName}]]
+							<b class="caret"></b>
+					</a>
+						<ul style="margin-top: 14px;" role="menu"
+							class="dropdown-setting dropdown-menu">
+							<li><a href="javascript:;"
+								onclick="return showEditPassword();"> <span
+									class="fa fa-edit"></span>&#160;&#160;修改密码
+							</a></li>
+							<li><a th:href="@{/loginOut}"> <span
+									class="fontawesome-reply"></span>&#160;&#160;退出
+							</a></li>
+
+						</ul></li>
+
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<!-- top end -->
+
+
+
+
+	<!-- SIDE MENU -->
+	<div th:fragment="left">
+		<div id="skin-select">
+			<div id="logo">
+				<h3>
+					福山证大管理平台<span>v1.0</span>
+				</h3>
+			</div>
+
+			<a id="toggle"> <span class="entypo-menu"></span>
+			</a>
+			<div class="dark">
+				<form action="#">
+					<span> <input type="text" name="search" value=""
+						class="search rounded id_search" placeholder="Search Menu..."
+						autofocus="">
+					</span>
+				</form>
+			</div>
+			<div class="search-hover">
+				<form id="demo-2">
+					<input type="search" placeholder="Search Menu..." class="id_search">
+				</form>
+			</div>
+			<div class="skin-part">
+				<div id="tree-wrap">
+					<div class="side-bar">
+						<ul class="topnav menu-left-nest">
+
+							<li th:each="res:${session.sysResource_session}"
+									th:if="${res?.type} eq '0'">
+									<th:block th:if="${res?.isDelete eq false && res?.isDisable eq false}">
+									<a
+									class="tooltip-tip ajax-load" href="#" th:title="${res.name}">
+										<i th:class="${res?.icon}"></i> <span>[[${res?.name}]]</span>
+
+										<!-- <h4 style="display: inline-block; float: none;">
+										<img
+											th:src="${activeUri}==${res.resUrl}?'../assets/img/minus.png':'../assets/img/plus.png'"/>
+									</h4> -->
+								</a>
+									<ul
+										th:style="${activeUri}==${res.resUrl}?'display: block;':'display: none;'">
+										<li th:each="res2:${session.sysResource_session}"
+											th:if="${res2.parentId eq res.id}">
+											<th:block th:if="${res2?.isDelete eq false && res?.isDisable eq false}">
+											<a
+											class="tooltip-tip2 ajax-load"
+											th:href="|@{/}${res2.resUrl}?urlid=${res2.id}|"
+											th:title="${res2.name}"><i th:class="${res2.icon}"></i><span>[[${res2.name}]]</span>
+											</a>
+											</th:block>
+										</li>
+
+
+									</ul>
+									
+									</th:block>
+									</li>
+
+						<!-- 	<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysOperations}"><span>操作权限功能</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysResources}"><span>菜单资源配置</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysRoles}"><span>角色管理</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysUsers}"><span>用户管理</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysRegins}"><span>区域管理</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysSchools}"><span>学校管理</span></a></li>
+							<li><a class="tooltip-tip2 ajax-load"
+								th:href="@{/admin/sysSchoolAccounts}"><span>学校账号管理</span></a></li> -->
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- END OF SIDE MENU -->
+
+
+
+
+	<!-- title start -->
+	<div class="row" th:fragment="title">
+		<div id="paper-top">
+			<div class="col-lg-3">
+				<h2 class="tittle-content-header">
+					<i class="icon-window"></i> <span
+						th:if="${session.menuid eq res.id}"
+						th:each="res:${session.sysResource_session}" th:text="${res.name}">
+					</span>
+				</h2>
+			</div>
+
+		</div>
+	</div>
+	<!-- title end   -->
+
+
+
+
+	<!-- 信息提示 -->
+
+	<div aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+		class="modal fade bs-example-modal-lg" style="display: none;"
+		th:fragment="myModal" id="myModal">
+		<div class="modal-dialog modal-lg"
+			style="margin-top: 10%; width: 800px; height: 400px;">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4>修改密码</h4>
+				</div>
+				<div class="content-wrap">
+
+					<div class="body-nest" id="Blank_Page_Content">
+						<div class="row">
+							<!-- edit form column -->
+							<div class="col-md-12 personal-info">
+
+								<form class="form-horizontal" enctype="multipart/form-data"
+									id="editPasswordForm">
+
+									<div class="form-group">
+										<label class="col-lg-2 control-label">当前账号：</label>
+										<div class="col-lg-6">
+											<input class="form-control" readonly="readonly"
+												th:value="${session.sysuser_session?.accountName}">
+										</div>
+										<input type="hidden" id="id" name="id"
+											th:value="${session.sysuser_session?.id}">
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-2 control-label">旧密码：</label>
+										<div class="col-lg-6">
+											<input class="form-control" id="oldpassword"
+												placeholder="请输入旧密码" name="oldpassword" required="required">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-2 control-label">新密码：</label>
+										<div class="col-lg-6">
+											<input class="form-control" id="password1"
+												placeholder="请输入新密码" name="password1" required="required">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-2 control-label">确认密码：</label>
+										<div class="col-lg-6">
+											<input class="form-control" id="password2"
+												placeholder="请确认密码" name="password2" required="required">
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+									<div class="form-group">
+										<label class="col-lg-1 control-label"></label>
+										<div class="col-md-8">
+											<button type="submit" class="btn btn-success">修改</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- 信息提示 -->
+	<div aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+		class="modal fade bs-example-modal-lg" style="display: none;"
+		th:fragment="myMessageModal" id="myMessageModal">
+		<div class="modal-dialog modal-lg"
+			style="margin-top: 10%; width: 320px; height: 200px;">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4>信息提示</h4>
+				</div>
+				<div class="modal-body">
+					<h3 id="modalbody" align="center"></h3>
+				</div>
+				<div class="modal-footer" style="margin-top: 0px;">
+					<a href="#" class="btn btn-primary" data-dismiss="modal">确定</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 	<div aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+		class="modal fade bs-example-modal-lg" style="display: none;"
+		th:fragment="myModal" id="myModal">
+		<div class="modal-dialog modal-lg"
+			style="margin-top: 10%; width: 320px; height: 200px;">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4>
+						信息提示
+					</h4>
+				</div>
+				<div class="modal-body">
+					<h3 id="modalbody" align="center"></h3>
+				</div>
+				<div class="modal-footer" style="margin-top: 0px;">
+				<a href="#" class="btn btn-primary" data-dismiss="modal">确定</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div> -->
+
+
+
+
+	<!-- delete Model -->
+	<div aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1"
+		class="modal fade bs-example-modal-lg" style="display: none;"
+		th:fragment="deleteModal" id="deleteModal">
+		<div class="modal-dialog modal-lg"
+			style="margin-top: 10%; width: 320px; height: 200px;">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4>
+						<font color="red">删除提示</font>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<h4>
+						<font color="red">您确定要删除该数据吗？</font>
+					</h4>
+				</div>
+				<div class="modal-footer" style="margin-top: 0px;">
+					<button onclick="return todelete();" class="btn btn-danger"
+						data-dismiss="modal">确定</button>
+					<a href="#" class="btn btn-primary" data-dismiss="modal">取消</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+	<div th:fragment="menu">
+		<ul id="breadcrumb" style="height: 51px;">
+
+			<li><span class="entypo-home"> <a href="#"
+					th:href="@{/toindex}"></a></span></li>
+			<li><i class="fa fa-lg fa-angle-right"></i></li>
+
+			<li th:if="${session.menuid !=null && session.menuid eq res.id}"
+				th:each="res:${session.sysResource_session}"><a href="#"
+				th:each="res2:${session.sysResource_session}"
+				th:if="${res2.id eq res.parentId}" th:text="${res2.name}"></a></li>
+			<li th:if="${session.menuid !=null && session.menuid eq res.id}"
+				th:each="res:${session.sysResource_session}"><i
+				th:each="res2:${session.sysResource_session}"
+				th:if="${res2.id eq res.parentId}" class="fa fa-lg fa-angle-right"></i>
+			</li>
+
+			<li th:if="${session.menuid !=null && session.menuid eq res.id}"
+				th:each="res:${session.sysResource_session}"
+				th:utext="|<a href='#'>${res.name}</a>|">
+			<li th:if="${session.menuid !=null }"><i
+				class="fa fa-lg fa-angle-right"></i></li>
+		</ul>
+	</div>
+
+	<!-- 右侧菜单start -->
+	<div class="sb-slidebar sb-right" th:fragment="right">
+		<!-- <div class="right-wrapper">
+			<div class="row">
+				<h3>
+					<span><i class="entypo-gauge"></i>&nbsp;&nbsp;MAIN WIDGET</span>
+				</h3>
+				<div class="col-lg-12">
+
+					<div class="widget-knob">
+						<span class="chart" style="position: relative" data-percent="86">
+							<span class="percent"></span>
+						</span>
+					</div>
+					<div class="widget-def">
+						<b>Distance traveled</b> <br> <i>86% to the check point</i>
+					</div>
+
+					<div class="widget-knob">
+						<span class="speed-car" style="position: relative"
+							data-percent="60"> <span class="percent2"></span>
+						</span>
+					</div>
+					<div class="widget-def">
+						<b>The average speed</b> <br> <i>30KM/h avarage speed</i>
+					</div>
+
+
+					<div class="widget-knob">
+						<span class="overall" style="position: relative" data-percent="25">
+							<span class="percent3"></span>
+						</span>
+					</div>
+					<div class="widget-def">
+						<b>Overall result</b> <br> <i>30KM/h avarage Result</i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="margin-top: 0;" class="right-wrapper">
+			<div class="row">
+				<h3>
+					<span><i class="entypo-chat"></i>&nbsp;&nbsp;CHAT</span>
+				</h3>
+				<div class="col-lg-12">
+					<span class="label label-warning label-chat">Online</span>
+					<ul class="chat">
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/20.jpg">
+							</span><b>Dave Junior</b> <br> <i>Last seen : 08:00 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/21.jpg">
+							</span><b>Kenneth Lucas</b> <br> <i>Last seen : 07:21 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/22.jpg">
+							</span><b>Heidi Perez</b> <br> <i>Last seen : 05:43 PM</i>
+						</a></li>
+
+
+					</ul>
+
+					<span class="label label-chat">Offline</span>
+					<ul class="chat">
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-offline img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/23.jpg">
+							</span><b>Dave Junior</b> <br> <i>Last seen : 08:00 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-offline img-circle"
+									src="http://api.randomuser.me/portraits/thumb/women/24.jpg">
+							</span><b>Kenneth Lucas</b> <br> <i>Last seen : 07:21 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-offline img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/25.jpg">
+							</span><b>Heidi Perez</b> <br> <i>Last seen : 05:43 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-offline img-circle"
+									src="http://api.randomuser.me/portraits/thumb/women/25.jpg">
+							</span><b>Kenneth Lucas</b> <br> <i>Last seen : 07:21 PM</i>
+						</a></li>
+						<li><a href="#"> <span> <img alt=""
+									class="img-chat img-offline img-circle"
+									src="http://api.randomuser.me/portraits/thumb/men/26.jpg">
+							</span><b>Heidi Perez</b> <br> <i>Last seen : 05:43 PM</i>
+						</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<!-- 右侧菜单end -->
+
+
+
+
+
+
+	<div th:fragment="footer">
+
+		<div style="text-align: center;">
+			<p>
+				More Templates <a href="" target="_blank"
+					title="中赤信息技术">技术支持中赤信息技术（上海）有限公司@2020</a>
+			</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

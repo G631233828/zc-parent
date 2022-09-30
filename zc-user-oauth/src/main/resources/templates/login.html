@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>中赤酷睿鼎系统管理平台</title>
+
+<link th:href="@{/css/login.css}" rel="stylesheet" type="text/css">
+<script th:src="@{/js/vue.js}"></script>
+<script th:src="@{/js/axios.js}"></script>
+<style>
+.errorMessage {
+	color: darkred;
+	margin-left: 20px;
+}
+</style>
+
+</head>
+<body>
+
+	<div class="login-box" id="login">
+		<div class="input-content">
+			<div class="login_tit">
+				<div>
+					<i class="tit-bg left"></i> 中赤·酷睿鼎 <i class="tit-bg right"></i>
+				</div>
+			</div>
+			<p class="p user_icon">
+				<input type="text" name="username" id="username" ref="username"
+					v-model="username" v-on:keyup="checkusername()" placeholder="账号"
+					autocomplete="off" class="login_txtbx">
+			</p>
+			<label class="errorMessage error_icon" v-if="showu" id="eusername">{{eusername}}</label>
+			<p class="p pwd_icon">
+				<input type="password" ref="password" v-model="password"
+					v-on:keyup="checkpassword()" placeholder="密码" autocomplete="off"
+					class="login_txtbx">
+			</p>
+			<label class="errorMessage error_icon" v-if="showp" id="epassword">{{epassword}}</label>
+			<div class="p val_icon">
+				<div class="checkcode">
+					<input type="text" id="J_codetext" placeholder="输入验证码"
+						autocomplete="off" maxlength="4" class="login_txtbx">
+				</div>
+				<a class="ver_btn" onselectstart="return false">看不清，换一张</a>
+			</div>
+			<div class="signup">
+				<a class="gv" v-on:click="login()">登&nbsp;&nbsp;录</a> <a class="gv">清&nbsp;&nbsp;空</a>
+			</div>
+		</div>
+		<div class="canvaszz"></div>
+		<canvas id="canvas" width="1920" height="893"></canvas>
+	</div>
+
+	<script th:inline="javascript">
+	var app = new Vue({
+		el: "#login",
+		data: {
+			username:'',
+			password:'',
+			epassword:'',
+			eusername:'',
+			showu:false,
+			showp:false,
+			fromx:[[${from}]]
+		},
+		methods: {
+			login: function() {
+				this.checkusername()
+				this.checkpassword()
+				axios.post('http://localhost:9001/user/login?username=' + this.username + '&password=' + this.password).then(
+					function(response) {
+						if (response.data.flag) { //登录成功
+							alert(app.fromx)
+							window.location.href = app.fromx;
+						} else {
+							response.data.message;
+							alert(response.data.message)
+						}
+					}
+				)
+			},
+			checkusername: function() {
+				if(this.username==''){
+					this.showu=true,
+					this.eusername="用户名不能为空",
+					this.$refs.username.focus()
+					return false;
+				}else{
+					this.showu=false
+				}
+			},checkpassword: function() {
+				
+				if(this.password==''){
+					this.showp=true,
+					this.epassword="密码不能为空",
+					this.$refs.password.focus()
+					return false;
+				}else{
+					this.showp=false
+				}
+			}
+		}
+
+
+	})
+	</script>
+
+	<!--星光特效-->
+	<script th:src="@{/js/staranimal.js}"></script>
+
+
+
+</body>
+</html>
